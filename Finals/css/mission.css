@@ -1,0 +1,311 @@
+:root{
+    --primary-color: #EBE4CB;
+    --secondary-color: #0064FA;
+    --text-color: #000;
+    --dark-color: #1E1E1E;
+    --itim: 'Itim';
+    --Inconsolata: 'Inconsolata';
+    --Lilita: 'Lilita One';
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--Lilita);
+    /* height: 100vh; */
+    background: var(--primary-color);
+}
+
+.mission-container{
+    height: 832px;
+    width: 100%;
+    background-image: url(/images/mission-back.png);
+}
+
+.mission-container .grid{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.arrow{
+    cursor: pointer; width: 50px; margin-left: 20px; margin-top: 20px;
+    position: absolute;
+    top:0;
+    bottom:0;
+}
+
+
+.heading{
+    grid-area: 1 / 1 / 2 / 5;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.heading p{
+    font-size: 32px;
+    font-family: var(--itim);
+    color: var(--secondary-color);
+}
+
+.heading h1{
+    font-size: 60px;
+    margin-top: 31px;
+}
+
+.pic{
+    grid-area: 2 / 1 / 4 / 3;
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.mission-text{
+    grid-area: 2 / 3 / 4 / 5;
+    padding-top: 82px;
+    padding-left: 20px;
+}
+
+.mission-text h2{
+    font-size: 32px;
+    line-height: 45px;
+}
+
+.mission-text p{
+    margin-top: 28px;
+    line-height: 2rem;
+    font-size: 20px;
+    font-family: var(--Inconsolata);
+}
+
+
+/**
+    ********** END OF MISSION SECTION **********
+**/
+
+/**
+    ********** START OF TESTIMONIAL SECTION **********
+**/
+
+
+.testimonial-container{
+    height: 180vh;
+    background: #E7DFC6;
+    padding-top: 128px;
+    overflow: hidden;
+}
+
+.testimonial-heading{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+
+.swiper-container{
+    height: 100%;
+}
+
+.swiper-grid{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-gap: 20px;
+}
+
+.swiper-grid > div{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blue-background {
+    /* background-color: blue; */
+    width: 350px;
+    height: 350px;
+    background-image: url(/images/big\ circle.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.swiper-grid div h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 48px;
+}
+
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 44px;
+    color: var(--secondary-color);
+    font-family: var(--Inconsolata);
+    font-weight: lighter;
+    position: relative;
+    right: 40px;
+}
+
+.header-wrapper h5{
+    position: relative;
+    left: -40px;
+    font-size: 32px;
+}
+
+.swiper-grid div p{
+    width: 65%;
+    margin-top: 32px;
+    font-family: var(--Inconsolata);
+    line-height: 1.3rem;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@keyframes moveHeading {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+.testimonial-heading h1 {
+    animation: moveHeading 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+
+.animate-from-left {
+    transform: translateX(-100%);
+}
+.animate-from-left.animated {
+    transform: translateX(0);
+}
+
+.animate-from-right {
+    transform: translateX(100%);
+}
+.animate-from-right.animated {
+    transform: translateX(0);
+}
+
+/* Add initial styling for the animated elements */
+.animate-from-left{
+    opacity: 0;
+    transform: translateX(-200px); /* Initial position */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.animate-from-right {
+    opacity: 0;
+    transform: translateX(200px);
+}
+.animate-from-left.animated,
+.animate-from-right.animated {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+}
+
+
+/* Existing styles... */
+
+/* Add responsiveness for small screens */
+@media (max-width: 767px) {
+
+    .mission-container{
+        height: auto;
+        width: 90%;
+    }
+    .heading h1 {
+        font-size: 40px; /* Adjust font size for small screens */
+    }
+
+    .mission-text h2 {
+        font-size: 18px;
+    }
+
+    .mission-text p {
+        font-size: 12px;
+        line-height: 1.3rem;
+    }
+
+    /* Adjust grid layout for small screens */
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .pic {
+        padding-left: 0; /* Remove left padding on small screens */
+    }
+
+    .mission-text {
+        padding: 30px; /* Add some padding to the mission text */
+    }
+
+    .swiper-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    }
+
+    .header-wrapper h5 {
+        font-size: 24px;
+    }
+}
+
+/* Adjustments for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mission-container {
+        height: auto;
+       width: 80%; /* Allow the container to adjust its height based on content */
+    }
+
+    .swiper-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    }
+
+    .header-wrapper h5 {
+        font-size: 28px;
+    }
+
+    .mission-text h2{
+        margin-top: -40px;
+    }
+
+    .mission-text p {
+        font-size: 16px;
+        line-height: 1.3rem;
+    }
+
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+    .swiper-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    }
+
+    .swiper-grid div p{
+        font-size: 18px;
+        line-height: 2rem;
+    }
+
+    .mission-container{
+        width: 100%;
+    }
+}
+
+
+.blue{
+    color: var(--secondary-color);
+}

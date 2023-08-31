@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+</head>
+<body>
+    <img onclick="back()" style=" cursor: pointer; width: 50px; margin-left: 20px; margin-top: 20px;" src="images/arrow.png" alt="">
+    <div class="grid">
+        
+        <div class="heading">
+            <p>Customer Service</p>
+            <h1>OUR <span class="blue">NICXSIANS</span>  <br>
+                WILL HELP YOU</h1>
+        </div>
+
+        <div class="pic">
+            <img src="images/Screenshot 2023-08-18 at 01-00-17 Crazy About Eggs 1.png" alt="">
+        </div>
+
+        <div class="table">
+            <div class="table-content">
+                <div>TELEGRAM</div>
+                <div>MONDAY TO SUNDAY, FROM 9AM TO 6PM</div>
+                <div>(63+) 955 207 6754</div>
+            </div>
+
+            <div class="table-content">
+                <div>FACEBOOK</div>
+                <div>MONDAY TO SATURDAY, FROM 10AM TO 4PM</div>
+                <div>NICXS ASSASSIN</div>
+            </div>
+
+            <div class="table-content">
+                <div>PHONE</div>
+                <div>ANSWER WITHIN A SECOND ON WORKING DAYS</div>
+                <div>(63+) 955 207 6754</div>
+            </div>
+
+            <div class="table-content">
+                <div>EMAIL</div>
+                <div>ANSWER WITHIN AN HOUR ON WORKING DAYS</div>
+                <div class="show-form" id="showFormLink">SHOW FORM</div>
+            </div>
+
+            <div class="form-container" id="formContainer" style="display: none;">
+                <form>
+                    <label class="email" for="">Email</label>
+                    <input type="text"> <br><br><br>
+                    <label class="message"  for="">MESSAGE</label> 
+                    <textarea name="" id="" cols="30" rows="10"></textarea> <br>
+                    <input onclick="refresh()" type="button" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const showFormLink = document.getElementById('showFormLink');
+    const formContainer = document.getElementById('formContainer');
+
+    showFormLink.addEventListener('click', () => {
+        formContainer.style.display = 'block';
+        showFormLink.style.display = 'none';
+    });
+        function back(){
+            location.href = "index.html";
+        }
+
+         function refresh(){
+            location.href = "contact.html";
+        }
+    </script>
+</body>
+</html>

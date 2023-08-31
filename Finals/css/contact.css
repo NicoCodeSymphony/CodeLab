@@ -1,0 +1,224 @@
+:root {
+    --primary-color: #EBE4CB;
+    --secondary-color: #0064FA;
+    --text-color: #000;
+    --dark-color: #1E1E1E;
+    --itim: 'Itim';
+    --Inconsolata: 'Inconsolata';
+    --Lilita: 'Lilita One';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Lilita);
+    /* height: 250vh; */
+    background: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0px;
+    height: 100%;
+    padding: 71px 76px;
+}
+
+.heading {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.heading p {
+    font-size: 2.2rem;
+    font-family: var(--itim);
+    color: var(--secondary-color);
+}
+
+.heading h1 {
+    font-size: 5rem;
+    margin-top: 15px;
+}
+
+.pic {
+    grid-area: 1 / 3 / 3 / 5;
+}
+
+.table {
+    grid-area: 3 / 1 / 5 / 5;
+    margin-top: 18.5vh;
+    width: 80%;
+    margin-left: 250px;
+}
+
+.table-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.table-content div {
+    border-top: 1px solid #000;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-content div:first-child {
+    color: var(--secondary-color);
+    font-size: 40px;
+    padding-left: 40px;
+}
+
+.table-content div:nth-child(2) {
+    font-size: 20px;
+}
+
+.table-content div:last-child {
+    font-size: 18px;
+    font-family: var(--Inconsolata);
+}
+
+.show-form {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.blue {
+    color: var(--secondary-color);
+}
+
+/* Media query for screens up to 768px width */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        padding: 20px;
+    }
+
+    .heading {
+        text-align: center;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .pic {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .table {
+        grid-area: 3 / 1 / 5 / 2;
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .table-content {
+        grid-template-columns: 1fr;
+    }
+
+    .table-content div:first-child {
+        font-size: 28px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .show-form {
+        margin-top: 10px;
+    }
+}
+
+.testimonial-heading h1 {
+    animation: moveHeading 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+
+.animate-from-left {
+    transform: translateX(-100%);
+}
+.animate-from-left.animated {
+    transform: translateX(0);
+}
+
+.animate-from-right {
+    transform: translateX(100%);
+}
+.animate-from-right.animated {
+    transform: translateX(0);
+}
+
+/* Add initial styling for the animated elements */
+.animate-from-left{
+    opacity: 0;
+    transform: translateX(-200px); /* Initial position */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.animate-from-right {
+    opacity: 0;
+    transform: translateX(200px);
+}
+.animate-from-left.animated,
+.animate-from-right.animated {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+}
+
+/* Existing styles */
+
+.form-container {
+    margin-top: 30px;
+    margin-left: 7%;
+}
+
+.form-container .email{
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.form-container input[type="text"]{
+    padding: 7px 50% 7px 10px;
+    margin-left: 18%;
+    background: transparent;
+    border: 1px solid #000;
+}
+
+.message{
+    color: var(--secondary-color);
+    font-size: 2rem;
+    position: relative;
+    top: 30px;
+}
+
+
+.form-container textarea{
+    padding: 7px 42% 7px 10px;
+    margin-left: 25%;
+    background: transparent;
+    border: 1px solid #000;
+}
+
+input[type="button"]{
+    float: right;
+    margin-right: 80px;
+    padding: 20px 45px;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    background: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    font-family: var(--Lilita);
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    background: var(--secondary-color);
+    color: #fff;
+    transition: 1s;
+}
