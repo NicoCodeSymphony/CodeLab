@@ -1,0 +1,42 @@
+.table{
+    width: 20vh;
+}
+
+
+
+.table{
+    margin-top: 300px;
+}
+
+
+
+.btnContainer button{
+    border: none;
+}
+
+.btnContainer .edit{
+    background-color: gold;
+    padding: 8px 10px;
+    border-radius: 9px;
+}
+
+.btnContainer .delete{
+    background-color: red;
+    padding: 8px 10px;
+    border-radius: 9px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+tr, th{
+    width: 50px;
+}
+
+select{
+   width: 40vh;
+   height: 7vh;
+}
+
+.input1{
+    width: 50px;
+}
