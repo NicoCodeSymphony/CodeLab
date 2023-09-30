@@ -1,0 +1,65 @@
+    /* CSS for the Edit Popup */
+    .overlay {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5% 20%;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .popup {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 50%; 
+        max-height: 100%; 
+        overflow: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        color: #000;
+        margin-left: 20%;
+    }
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup input,
+.popup select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.popup button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    background: #333;
+    color: white;
+}
+
+.popup button:last-child {
+    margin-top: 0;
+}
+
+
+.cancel{
+    margin-top: 50px;
+}
